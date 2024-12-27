@@ -1,20 +1,125 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
 }
-header,
-footer {
+
+/* Header Styles */
+header {
     background: #0073e6;
     color: white;
+    padding: 1rem 0;
     text-align: center;
-    padding: 1em 0;
 }
+
+/* Banner Section */
+.banner {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    background-color: #0073e6;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Main Content Area */
 main {
-    padding: 1em;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+/* Section Styles */
+section {
+    margin: 2rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+/* Flexbox Layout for FAQ and Contact */
+.faq-item,
+.contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.faq-item img,
+.contact-method img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+/* Link Styling */
 a {
     color: #0073e6;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }

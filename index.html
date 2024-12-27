@@ -3,40 +3,82 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Download Timetable Manager iOS app for easy scheduling and time management."
+        />
         <title>Timetable Manager</title>
         <link rel="stylesheet" href="styles.css" />
-        <style>
-            body {
-                min-height: 100vh;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-            }
-            main {
-                flex: 1;
-            }
-            footer {
-                padding: 1rem;
-            }
-        </style>
     </head>
     <body>
         <header>
+            <div class="logo">
+                <img src="logo.png" alt="Timetable Manager Logo" />
+            </div>
             <h1>Timetable Manager</h1>
         </header>
-        <main>
-            <section>
-                <h2>Contact Us</h2>
+
+        <section class="hero">
+            <div class="app-description">
                 <p>
-                    Email:
+                    Stay organized and on schedule with Timetable Manager.
+                    Manage your tasks effortlessly!
+                </p>
+                <a
+                    href="https://apps.apple.com/your-app-store-link"
+                    class="cta-button"
+                    >Get it on the App Store</a
+                >
+            </div>
+            <div class="screenshots">
+                <img
+                    src="images/screenshot1.png"
+                    alt="App Screenshot 1"
+                    width="300"
+                    height="600"
+                />
+                <img src="screenshot2.png" alt="App Screenshot 2" />
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Manage your timetable and tasks easily.</li>
+                <li>Set reminders for upcoming events.</li>
+                <li>Sync with your calendar.</li>
+                <li>Track progress and stay on top of deadlines.</li>
+            </ul>
+        </section>
+
+        <section class="support">
+            <h2>Need Help?</h2>
+            <p>
+                If you have any questions or need support, feel free to reach
+                out to us at:
+                <a href="mailto:timetablemanager.contact@gmail.com"
+                    >timetablemanager.contact@gmail.com</a
+                >
+            </p>
+        </section>
+
+        <section class="privacy-policy">
+            <p>
+                By using the app, you agree to our
+                <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Timetable Manager. All rights reserved.</p>
+                <p>
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="mailto:timetablemanager.contact@gmail.com"
-                        >timetablemanager.contact@gmail.com</a
+                        >Contact Us</a
                     >
                 </p>
-            </section>
-        </main>
-        <footer>
-            <p>© 2024 Timetable Manager</p>
+            </div>
         </footer>
     </body>
 </html>
