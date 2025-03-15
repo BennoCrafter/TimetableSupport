@@ -14,6 +14,7 @@ export default async function handler(req, res) {
         Accept: "application/vnd.github.v3+json",
         Authorization: `token ${GITHUB_TOKEN}`,
         "Content-Type": "application/json",
+        "User-Agent": "timetable-feedback",
       },
       body: JSON.stringify({ title, body, labels }),
     },
