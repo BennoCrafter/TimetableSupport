@@ -170,7 +170,7 @@
                                 Select feedback type
                             </option>
                             <option value="bug">Bug Report</option>
-                            <option value="feature">Feature Request</option>
+                            <option value="enhancement">Feature Request</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -220,7 +220,7 @@
                     const githubIssue = {
                         title: issueTitle,
                         body: issueDescription,
-                        labels: [issueType],
+                        labels: [issueType, "external-feedback-issue"],
                     };
 
                     fetch("/api/create-issue", {
