@@ -316,7 +316,11 @@
                     const githubIssue = {
                         title: issueTitle,
                         body: issueDescription,
-                        labels: [issueType, "external-feedback-issue"],
+                        labels: [
+                            issueType,
+                            "external-feedback-issue",
+                            `lang-${document.documentElement.lang}`,
+                        ],
                     };
 
                     fetch("/api/create-issue", {
