@@ -12,11 +12,16 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         Accept: "application/vnd.github.v3+json",
-        Authorization: `token ${GITHUB_TOKEN}`,
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
         "Content-Type": "application/json",
-        "User-Agent": "timetable-feedback",
+        "User-Agent": "TimetableBot",
       },
-      body: JSON.stringify({ title, body, labels }),
+      body: JSON.stringify({
+        title,
+        body,
+        labels,
+        author_association: "BOT",
+      }),
     },
   );
 
