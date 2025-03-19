@@ -303,8 +303,9 @@
 
             document
                 .getElementById("feedbackForm")
-                .addEventListener("submit", function (e) {
+                .addEventListener("submit", async function (e) {
                     e.preventDefault();
+                    document.getElementById("submitBtn").disabled = true;
 
                     const issueTitle =
                         document.getElementById("titleInput").value;
@@ -323,27 +324,26 @@
                         ],
                     };
 
-                    fetch("/api/create-issue", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(githubIssue),
-                    })
-                        .then((response) => {
-                            if (!response.ok) {
-                                throw new Error("Failed to submit feedback");
-                            }
-                            return response.json();
-                        })
-                        .then((data) => {
-                            console.log("Issue created:", data);
-                            showSuccessMessage();
-                        })
-                        .catch((error) => {
-                            console.error("Error:", error);
-                            alert(
-                                "There was an error submitting your feedback. Please try again.",
-                            );
+                    try {
+                        const response = await fetch("/api/create-issue", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(githubIssue),
                         });
+
+                        if (!response.ok) {
+                            throw new Error("Failed to submit feedback");
+                        }
+
+                        const data = await response.json();
+                        console.log("Issue created:", data);
+                        showSuccessMessage();
+                    } catch (error) {
+                        console.error("Error:", error);
+                        alert(
+                            "There was an error submitting your feedback. Please try again.",
+                        );
+                    }
                 });
 
             document
