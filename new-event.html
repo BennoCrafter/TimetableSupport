@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Redirecting...</title>
+        <script>
+            window.onload = function () {
+                const params = new URLSearchParams(window.location.search);
+                console.log(params);
+                if (!params.toString()) {
+                    document.body.innerHTML = "Params empty.";
+                    return;
+                }
+                window.location.href = `timetablemanager://${params}`;
+            };
+        </script>
+    </head>
+    <body>
+        Redirecting...
+    </body>
+</html>
