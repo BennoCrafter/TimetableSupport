@@ -2,19 +2,48 @@
 <html>
     <head>
         <title>Redirecting...</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
         <script>
             window.onload = function () {
                 const params = new URLSearchParams(window.location.search);
                 console.log(params);
-                if (!params.toString()) {
-                    document.body.innerHTML = "Params empty.";
-                    return;
-                }
-                window.location.href = `timetablemanager://${params}`;
+                redirect();
             };
+
+            function redirect() {
+                window.location.href = convertURL(window.location.search);
+            }
+
+            function convertURL(url) {
+                const params = new URLSearchParams(url);
+                const redirectUrl = `timetablemanager://new-event?${params}`;
+                return redirectUrl;
+            }
         </script>
     </head>
     <body>
-        Redirecting...
+        <div>Redirecting...</div>
+        <div>
+            <button onclick="redirect()">Click to Redirect manually</button>
+        </div>
     </body>
 </html>
