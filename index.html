@@ -1,339 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("tm-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TimetableManager</title>
+    <title>Timetable Manager</title>
 
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Timetable Manager - Organize Your Schedule with Ease">
-    <meta name="description" content="Timetable Manager is the ultimate app to plan your schedule, stay on top of tasks, and manage tests effortlessly. Download now for seamless organization!">
-
-    <!--====== Favicon Icon ======-->
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.png"
-      type="image/svg"
+    <meta name="title" content="Timetable Manager - Your timetable, tasks and exams in one place" />
+    <meta
+      name="description"
+      content="Timetable Manager is a clear, intuitive way to organize your timetable, manage tasks, and track exams — free on iPhone, iPad and Mac. Nothing collected, nothing tracked."
     />
 
-    <!-- ===== All CSS files ===== -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" />
-    <link rel="stylesheet" href="assets/css/ud-styles.css" />
-
-    <style>
-      @media (max-width: 768px) {
-        .navbar-brand img {
-          height: 80px;
-          width: 80px;
-        }
-        #fontLogo {
-          font-size: 20px !important;
-        }
-        .ud-hero-title {
-          font-size: 24px;
-        }
-        .ud-hero-desc {
-          font-size: 16px;
-        }
-        .ud-hero-image img {
-          max-width: 100%;
-          height: auto;
-        }
-        .ud-feature-title {
-          font-size: 18px;
-        }
-        .ud-feature-desc {
-          font-size: 14px;
-        }
-        .ud-footer-bottom-left {
-          flex-direction: column;
-          align-items: center;
-        }
-        .ud-footer-bottom-left a {
-          margin: 5px 0;
-        }
-      }
-      .feedback-button {
-        position: fixed;
-        right: 20px;
-        bottom: 80px;
-        background: #3056D3;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        z-index: 1000;
-      }
-      .feedback-button:hover {
-        background: #2048C0;
-        color: white;
-      }
-    </style>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ====== Header Start ====== -->
-    <header class="ud-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
-                  <img src="assets/images/logo/logo.png" alt="Logo" height="120" width="120" />
-                <p id="fontLogo" style="display: inline; font-size: 30px; color: white">TimetableManager</p>
-              </a>
-            </nav>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+          Timetable Manager
+        </a>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="de">DE</button>
           </div>
+          <button type="button" class="theme-toggle" aria-label="Toggle color theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="4"></line>
+              <line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+              <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line>
+              <line x1="20" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+              <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+          <a
+            class="btn btn-primary"
+            data-i18n="navGetApp"
+            href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
+            rel="nofollow noopener"
+            target="_blank"
+            >Get on App Store</a
+          >
         </div>
       </div>
     </header>
-    <!-- ====== Header End ====== -->
 
-    <!-- ====== Hero Start ====== -->
-    <section class="ud-hero" id="home">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-              <h1 class="ud-hero-title">
-                  Timetable Manager - Organize Your Schedule with Ease
-              </h1>
-              <p class="ud-hero-desc">
-                  Timetable Manager is the ultimate app to plan your schedule, stay on top of tasks, and manage tests effortlessly. Download now for seamless organization!
-              </p>
-              <ul class="ud-hero-buttons">
-                <li>
-                  <a href="https://apps.apple.com/us/app/timetable-manager/id6738605424" rel="nofollow noopener" target="_blank" class="ud-main-btn ud-white-btn">Get on App Store</a>
-                </li>
-              </ul>
-            </div>
-            <div
-              class="ud-hero-brands-wrapper wow fadeInUp"
-              data-wow-delay=".3s"
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1 data-i18n="heroTitle">Your timetable, tasks, and exams — one clear place.</h1>
+          <p class="lede" data-i18n="heroLede">
+            Timetable Manager gives you an intuitive way to plan your week,
+            manage tasks with the people around you, and keep every exam in
+            view. No setup, no clutter, nothing tracked.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              data-i18n="navGetApp"
+              href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
+              rel="nofollow noopener"
+              target="_blank"
+              >Get on App Store</a
             >
-            </div>
-            <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-                <img
-                  src="assets/images/hero/hero-image.png"
-                  alt="Hero Image"
-                  class="responsive-image"
-                />
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="ipad"
+            src="assets/images/mockups/ipad-mockup.svg"
+            alt="Timetable Manager timetable view on iPad"
+          />
+          <img
+            class="iphone"
+            src="assets/images/mockups/iphone-timetable.svg"
+            alt="Timetable Manager timetable view on iPhone"
+          />
+        </div>
+      </div>
+    </section>
 
-              <img
-                src="assets/images/hero/dotted-shape.svg"
-                alt="shape"
-                class="shape shape-1"
-                size="50"
-              />
-              <img
-                src="assets/images/hero/dotted-shape.svg"
-                alt="shape"
-                class="shape shape-2"
-              />
-            </div>
+    <section class="showcase" id="screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="showcaseHeading">A closer look</h2>
+          <p data-i18n="showcaseSub">Four screens, one simple system for staying ahead of your week.</p>
+        </div>
+        <div class="showcase-grid">
+          <div class="showcase-card">
+            <img src="assets/images/mockups/iphone-timetable.svg" alt="Weekly timetable screen" />
+            <h3 data-i18n="showcase1Title">Timetable</h3>
+            <p data-i18n="showcase1Desc">A clear day and week view, shaped around how you actually work.</p>
+          </div>
+          <div class="showcase-card">
+            <img src="assets/images/mockups/iphone-tasks.svg" alt="Task list with sharing screen" />
+            <h3 data-i18n="showcase2Title">Tasks &amp; Sharing</h3>
+            <p data-i18n="showcase2Desc">Track assignments and to-dos, and share tasks with others.</p>
+          </div>
+          <div class="showcase-card">
+            <img src="assets/images/mockups/iphone-exams.svg" alt="Exam tracking screen" />
+            <h3 data-i18n="showcase3Title">Exams</h3>
+            <p data-i18n="showcase3Desc">Every exam laid out with its date, so nothing sneaks up on you.</p>
+          </div>
+          <div class="showcase-card">
+            <img src="assets/images/mockups/iphone-themes.svg" alt="Color theme picker screen" />
+            <h3 data-i18n="showcase4Title">Color Themes</h3>
+            <p data-i18n="showcase4Desc">Pick a palette and make your timetable look like your own.</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- ====== Hero End ====== -->
 
-    <!-- ====== Features Start ====== -->
-    <section id="features" class="ud-features">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-section-title">
-              <h2>Features</h2>
-              <p>
-              </p>
-            </div>
-          </div>
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="featuresHeading">Built to keep you ahead</h2>
+          <p data-i18n="featuresSub">Every feature has one job: keeping your week honest and your stress low.</p>
         </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-              <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-                <div class="ud-feature-icon">
-                  <i class="lni lni-layers"></i>
-                </div>
-                <div class="ud-feature-content">
-                  <h3 class="ud-feature-title">Customizable Timetable</h3>
-                  <p class="ud-feature-desc">
-                      Easily organize your day with a clear and beautiful custom day view layout.
-                  </p>
-                </div>
-              </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+              </svg>
             </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-gift"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Tags for Better Organization</h3>
-                <p class="ud-feature-desc">
-                    Categorize events and tasks with customizable tags.
-                </p>
-              </div>
-            </div>
+            <h3 data-i18n="feature1Title">Customizable Timetable</h3>
+            <p data-i18n="feature1Desc">Organize your day with a clear, beautiful day view you can shape around how you actually work.</p>
           </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-move"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Task Management</h3>
-                <p class="ud-feature-desc">
-                    Track assignments, homework and to-dos seamlessly.
-                </p>
-              </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 11 3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
             </div>
+            <h3 data-i18n="feature2Title">Task Management &amp; Sharing</h3>
+            <p data-i18n="feature2Desc">Track assignments and to-dos, and share tasks with classmates, friends, or family.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="feature3Title">Exam Tracking</h3>
+            <p data-i18n="feature3Desc">Add and manage exams alongside your timetable, so every deadline stays in view.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.2L4 3a1 1 0 0 0-1 1l.2 5.59a2 2 0 0 0 .63 1.41l9.58 9.58a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.82Z"></path>
+                <circle cx="7.5" cy="7.5" r="1"></circle>
+              </svg>
+            </div>
+            <h3 data-i18n="feature4Title">Tags for Better Organization</h3>
+            <p data-i18n="feature4Desc">Categorize events and tasks with custom tags so everything stays easy to find.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22a9.7 9.7 0 0 1-7.2-3.2A9.6 9.6 0 0 1 2 12a10 10 0 0 1 10-10 9 9 0 0 1 9 8c0 2.5-2 4-4 4h-1.5a1.5 1.5 0 0 0-1 2.5c.4.4.5 1 .5 1.5a2 2 0 0 1-2 2Z"></path>
+                <circle cx="6.5" cy="11.5" r="1.5"></circle>
+                <circle cx="9.5" cy="7.5" r="1.5"></circle>
+                <circle cx="14.5" cy="7.5" r="1.5"></circle>
+                <circle cx="17.5" cy="11.5" r="1.5"></circle>
+              </svg>
+            </div>
+            <h3 data-i18n="feature5Title">Color Themes</h3>
+            <p data-i18n="feature5Desc">Choose a color palette and make your timetable feel like your own.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="feature6Title">Private by Design</h3>
+            <p data-i18n="feature6Desc">No accounts, no tracking. Your schedule and tasks stay on your devices.</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- ====== Features End ====== -->
 
-    <!-- ====== Footer Start ====== -->
-    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
-      <div class="shape shape-1">
-        <img src="assets/images/footer/shape-1.svg" alt="shape" />
-      </div>
-      <div class="shape shape-2">
-        <img src="assets/images/footer/shape-2.svg" alt="shape" />
-      </div>
-      <div class="shape shape-3">
-        <img src="assets/images/footer/shape-3.svg" alt="shape" />
-      </div>
-      <div class="ud-footer-widgets">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="ud-widget">
-                <a href="index.html" class="ud-footer-logo">
-                  <img src="assets/images/logo/logo.png" alt="logo" />
-                </a>
-                <p class="ud-widget-desc">
-                    Perfect for everyday life.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
-            <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
-            </div>
+    <section class="trust-strip">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3 data-i18n="trust1Title">Works everywhere</h3>
+            <p data-i18n="trust1Desc">A universal app for iPhone, iPad, Mac, and Apple Vision Pro.</p>
+          </div>
+          <div class="trust-item">
+            <h3 data-i18n="trust2Title">Nothing collected</h3>
+            <p data-i18n="trust2Desc">No accounts, no analytics, no ads — your data stays yours.</p>
+          </div>
+          <div class="trust-item">
+            <h3 data-i18n="trust3Title">English &amp; German</h3>
+            <p data-i18n="trust3Desc">The app and this site are fully available in both languages.</p>
           </div>
         </div>
       </div>
-      <div class="ud-footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <ul class="ud-footer-bottom-left">
-                <li>
-                  <a>&copy; 2025 Timetable Manager. All rights reserved.</a>
-                </li>
-                <li>
-                  <a href="mailto:timetablemanager.contact@gmail.com?subject=Timetable%20Manager%20App%20Support">Contact Us</a>
-                </li>
-                <li>
-                  <a href="privacy-policy.html">Privacy policy</a>
-                </li>
-                <li>
-                  <a href="imprint.html">Imprint</a>
-                </li>
-                <li>
-                  <a href="feedback.html">Give Feedback</a>
-                </li>
-              </ul>
-            </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap">
+        <h2 data-i18n="ctaHeading">Ready to get organized?</h2>
+        <p data-i18n="ctaSub">Download Timetable Manager and take control of your week today.</p>
+        <a
+          class="btn btn-primary"
+          data-i18n="navGetApp"
+          href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
+          rel="nofollow noopener"
+          target="_blank"
+          >Get on App Store</a
+        >
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <a class="footer-brand" href="index.html">
+              <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+              Timetable Manager
+            </a>
+            <p class="footer-tagline" data-i18n="footerTagline">Perfect for everyday life.</p>
           </div>
+          <ul class="footer-links">
+            <li><a href="mailto:timetablemanager.contact@gmail.com?subject=Timetable%20Manager%20App%20Support" data-i18n="footerContact">Contact Us</a></li>
+            <li><a href="privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a></li>
+            <li><a href="imprint.html" data-i18n="footerImprint">Imprint</a></li>
+            <li><a href="feedback.html" data-i18n="footerFeedback">Give Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom" data-i18n="footerCopyright">&copy; 2027 Timetable Manager. All rights reserved.</div>
       </div>
     </footer>
-    <!-- ====== Footer End ====== -->
-
-    <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
-    <!-- ====== Back To Top End ====== -->
-
-    <!-- ====== All Javascript Files ====== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      // ==== for menu scroll
-      const pageLink = document.querySelectorAll(".ud-menu-scroll");
-
-      pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
-          });
-        });
-      });
-
-      // section menu active
-      function onScroll(event) {
-        const sections = document.querySelectorAll(".ud-menu-scroll");
-        const scrollPos =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop;
-
-        for (let i = 0; i < sections.length; i++) {
-          const currLink = sections[i];
-          const val = currLink.getAttribute("href");
-          const refElement = document.querySelector(val);
-          const scrollTopMinus = scrollPos + 73;
-          if (
-            refElement.offsetTop <= scrollTopMinus &&
-            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-          ) {
-            document
-              .querySelector(".ud-menu-scroll")
-              .classList.remove("active");
-            currLink.classList.add("active");
-          } else {
-            currLink.classList.remove("active");
-          }
-        }
-      }
-
-      window.document.addEventListener("scroll", onScroll);
-    </script>
 
     <script>
-    function downloadLatestRelease(apiUrl) {
-      // Make a request to the GitHub API for the latest release data
-      fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Get the URL for the latest release's asset.
-          const latestReleaseUrl = data.assets[0].browser_download_url;
-
-          // Create a temporary anchor element and trigger the download
-          const a = document.createElement('a');
-          a.href = latestReleaseUrl;
-          a.download = data.assets[0].name;
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-        })
-        .catch(e => {
-          console.error('There was a problem fetching the latest release: ', e);
-        });
-    }
+      window.TRANSLATIONS = {
+        en: {
+          heroTitle: "Your timetable, tasks, and exams — one clear place.",
+          heroLede:
+            "Timetable Manager gives you an intuitive way to plan your week, manage tasks with the people around you, and keep every exam in view. No setup, no clutter, nothing tracked.",
+          showcaseHeading: "A closer look",
+          showcaseSub: "Four screens, one simple system for staying ahead of your week.",
+          showcase1Title: "Timetable",
+          showcase1Desc: "A clear day and week view, shaped around how you actually work.",
+          showcase2Title: "Tasks & Sharing",
+          showcase2Desc: "Track assignments and to-dos, and share tasks with others.",
+          showcase3Title: "Exams",
+          showcase3Desc: "Every exam laid out with its date, so nothing sneaks up on you.",
+          showcase4Title: "Color Themes",
+          showcase4Desc: "Pick a palette and make your timetable look like your own.",
+          featuresHeading: "Built to keep you ahead",
+          featuresSub: "Every feature has one job: keeping your week honest and your stress low.",
+          feature1Title: "Customizable Timetable",
+          feature1Desc:
+            "Organize your day with a clear, beautiful day view you can shape around how you actually work.",
+          feature2Title: "Task Management & Sharing",
+          feature2Desc: "Track assignments and to-dos, and share tasks with classmates, friends, or family.",
+          feature3Title: "Exam Tracking",
+          feature3Desc: "Add and manage exams alongside your timetable, so every deadline stays in view.",
+          feature4Title: "Tags for Better Organization",
+          feature4Desc: "Categorize events and tasks with custom tags so everything stays easy to find.",
+          feature5Title: "Color Themes",
+          feature5Desc: "Choose a color palette and make your timetable feel like your own.",
+          feature6Title: "Private by Design",
+          feature6Desc: "No accounts, no tracking. Your schedule and tasks stay on your devices.",
+          trust1Title: "Works everywhere",
+          trust1Desc: "A universal app for iPhone, iPad, Mac, and Apple Vision Pro.",
+          trust2Title: "Nothing collected",
+          trust2Desc: "No accounts, no analytics, no ads — your data stays yours.",
+          trust3Title: "English & German",
+          trust3Desc: "The app and this site are fully available in both languages.",
+          ctaHeading: "Ready to get organized?",
+          ctaSub: "Download Timetable Manager and take control of your week today.",
+        },
+        de: {
+          heroTitle: "Dein Stundenplan, deine Aufgaben und Prüfungen — an einem Ort.",
+          heroLede:
+            "Timetable Manager bietet dir eine intuitive Möglichkeit, deine Woche zu planen, Aufgaben gemeinsam mit anderen zu verwalten und jede Prüfung im Blick zu behalten. Ohne Einrichtung, ohne Ballast, ohne Tracking.",
+          showcaseHeading: "Ein genauerer Blick",
+          showcaseSub: "Vier Ansichten, ein einfaches System, um deiner Woche immer einen Schritt voraus zu sein.",
+          showcase1Title: "Stundenplan",
+          showcase1Desc: "Eine klare Tages- und Wochenansicht, angepasst an deinen Alltag.",
+          showcase2Title: "Aufgaben & Teilen",
+          showcase2Desc: "Behalte Aufgaben im Blick und teile sie mit anderen.",
+          showcase3Title: "Prüfungen",
+          showcase3Desc: "Jede Prüfung mit Termin im Überblick, damit dich nichts überrascht.",
+          showcase4Title: "Farbthemen",
+          showcase4Desc: "Wähle eine Farbpalette und gestalte deinen Stundenplan ganz nach deinem Geschmack.",
+          featuresHeading: "Damit du immer den Überblick behältst",
+          featuresSub: "Jede Funktion hat ein Ziel: deine Woche im Griff und deinen Stress gering zu halten.",
+          feature1Title: "Anpassbarer Stundenplan",
+          feature1Desc:
+            "Organisiere deinen Tag mit einer klaren, übersichtlichen Tagesansicht, die du ganz nach deinen Bedürfnissen gestalten kannst.",
+          feature2Title: "Aufgabenverwaltung & Teilen",
+          feature2Desc: "Behalte Aufgaben und To-dos im Blick und teile sie mit Mitschülern, Freunden oder der Familie.",
+          feature3Title: "Prüfungsübersicht",
+          feature3Desc: "Füge Prüfungen direkt in deinem Stundenplan hinzu, damit du keinen Termin verpasst.",
+          feature4Title: "Tags für bessere Organisation",
+          feature4Desc: "Kategorisiere Termine und Aufgaben mit eigenen Tags, damit du alles leicht wiederfindest.",
+          feature5Title: "Farbthemen",
+          feature5Desc: "Wähle eine Farbpalette und mach deinen Stundenplan zu deinem eigenen.",
+          feature6Title: "Privatsphäre inklusive",
+          feature6Desc: "Keine Konten, kein Tracking. Dein Stundenplan und deine Aufgaben bleiben auf deinen Geräten.",
+          trust1Title: "Überall einsatzbereit",
+          trust1Desc: "Eine universelle App für iPhone, iPad, Mac und Apple Vision Pro.",
+          trust2Title: "Keine Datensammlung",
+          trust2Desc: "Keine Konten, keine Analyse, keine Werbung — deine Daten gehören dir.",
+          trust3Title: "Deutsch & Englisch",
+          trust3Desc: "Die App und diese Website sind vollständig in beiden Sprachen verfügbar.",
+          ctaHeading: "Bereit, organisiert zu starten?",
+          ctaSub: "Lade Timetable Manager herunter und übernimm noch heute die Kontrolle über deine Woche.",
+        },
+      };
     </script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/i18n.js"></script>
   </body>
 </html>

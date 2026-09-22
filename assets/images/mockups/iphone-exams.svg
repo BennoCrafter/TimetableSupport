@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 610" fill="none">
+  <!-- Replace this file with a real "Exams" screenshot export (keep the same filename to update the site automatically). -->
+  <rect x="0" y="0" width="300" height="610" rx="54" fill="#14161f"/>
+  <rect x="6" y="6" width="288" height="598" rx="48" fill="#0b0c10"/>
+  <rect x="14" y="14" width="272" height="582" rx="42" fill="#ffffff"/>
+
+  <rect x="115" y="30" width="70" height="22" rx="11" fill="#0b0c10"/>
+
+  <rect x="34" y="70" width="80" height="16" rx="8" fill="#e7e9f0"/>
+  <circle cx="252" cy="78" r="14" fill="#eef1ff" stroke="#3653ff" stroke-width="1.5"/>
+
+  <!-- exam card 1 -->
+  <rect x="34" y="108" width="232" height="76" rx="14" fill="#fff4e8" stroke="#fb923c" stroke-width="1.2"/>
+  <rect x="50" y="126" width="120" height="12" rx="6" fill="#7c4a1e"/>
+  <rect x="50" y="146" width="80" height="9" rx="4.5" fill="#c98a4c"/>
+  <rect x="204" y="124" width="46" height="20" rx="10" fill="#fb923c"/>
+
+  <!-- exam card 2 -->
+  <rect x="34" y="196" width="232" height="76" rx="14" fill="#eef1ff" stroke="#3653ff" stroke-width="1.2"/>
+  <rect x="50" y="214" width="140" height="12" rx="6" fill="#25348c"/>
+  <rect x="50" y="234" width="90" height="9" rx="4.5" fill="#7686e0"/>
+  <rect x="212" y="212" width="38" height="20" rx="10" fill="#3653ff"/>
+
+  <!-- exam card 3 -->
+  <rect x="34" y="284" width="232" height="76" rx="14" fill="#e5fbea" stroke="#22c55e" stroke-width="1.2"/>
+  <rect x="50" y="302" width="110" height="12" rx="6" fill="#166534"/>
+  <rect x="50" y="322" width="95" height="9" rx="4.5" fill="#4ea86f"/>
+  <rect x="212" y="300" width="38" height="20" rx="10" fill="#22c55e"/>
+
+  <!-- exam card 4 (muted, past) -->
+  <rect x="34" y="372" width="232" height="76" rx="14" fill="#f7f8fb" stroke="#e7e9f0" stroke-width="1.2"/>
+  <rect x="50" y="390" width="130" height="12" rx="6" fill="#9aa0ae"/>
+  <rect x="50" y="410" width="70" height="9" rx="4.5" fill="#c7c9d6"/>
+  <rect x="212" y="388" width="38" height="20" rx="10" fill="#c7c9d6"/>
+
+  <rect x="120" y="590" width="60" height="5" rx="2.5" fill="#c7c9d6"/>
+</svg>

@@ -2,43 +2,52 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <script>
+          (function () {
+            try {
+              var t = localStorage.getItem("tm-theme");
+              if (t === "dark" || t === "light") {
+                document.documentElement.setAttribute("data-theme", t);
+              }
+            } catch (e) {}
+          })();
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Feedback Form</title>
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            .feedback-shell {
+                padding: 56px 0 96px;
             }
 
-            body {
-                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-                min-height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-            }
-
-            .container {
-                width: 100%;
-                max-width: 600px;
+            .feedback-shell .wrap {
+                max-width: 560px;
             }
 
             .form-container {
-                background-color: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
+                background-color: var(--surface);
+                border: 1px solid var(--border);
+                padding: 32px;
+                border-radius: var(--radius-lg);
             }
 
-            h1 {
-                color: #333;
-                margin-bottom: 25px;
-                text-align: center;
-                font-size: 28px;
+            .form-container h1 {
+                margin: 0 0 8px;
+                font-size: 26px;
+                letter-spacing: -0.01em;
+            }
+
+            .form-container > p.form-intro {
+                color: var(--muted);
+                margin: 0 0 26px;
+                font-size: 15px;
             }
 
             .form-group {
@@ -48,168 +57,189 @@
             label {
                 display: block;
                 margin-bottom: 8px;
-                font-weight: 500;
-                color: #444;
+                font-weight: 600;
+                font-size: 14px;
+                color: var(--ink);
             }
 
             input,
             textarea,
             select {
                 width: 100%;
-                padding: 12px;
-                border: 1px solid #ddd;
-                border-radius: 6px;
-                font-size: 16px;
-                transition: border 0.3s ease;
-                background-color: white;
-                cursor: pointer;
+                padding: 12px 14px;
+                border: 1px solid var(--border);
+                border-radius: var(--radius-sm);
+                font-size: 15px;
+                font-family: var(--font);
+                transition: border 0.15s ease, box-shadow 0.15s ease;
+                background-color: var(--surface);
+                color: var(--ink);
             }
 
             select {
                 appearance: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+                cursor: pointer;
+                background-image: url("data:image/svg+xml;utf8,<svg fill='%236b7280' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
                 background-repeat: no-repeat;
                 background-position: right 10px center;
                 padding-right: 40px;
             }
 
+            input:hover,
+            textarea:hover,
             select:hover {
-                border-color: #6a5acd;
+                border-color: var(--accent);
             }
 
+            input:focus,
+            textarea:focus,
             select:focus {
                 outline: none;
-                border-color: #6a5acd;
-                box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+                border-color: var(--accent);
+                box-shadow: 0 0 0 3px var(--accent-soft);
             }
 
-            select option {
-                padding: 12px;
-            }
-
-            button {
-                background-color: #6a5acd;
+            button[type="submit"],
+            #newFeedbackBtn {
+                background-color: var(--accent);
                 color: white;
                 border: none;
-                padding: 14px 24px;
-                border-radius: 6px;
-                font-size: 16px;
-                font-weight: 600;
+                padding: 13px 24px;
+                border-radius: 999px;
+                font-size: 15px;
+                font-weight: 650;
+                font-family: var(--font);
                 cursor: pointer;
                 width: 100%;
-                transition: background-color 0.3s ease;
+                transition: background-color 0.15s ease;
             }
 
-            button:hover {
-                background-color: #5b4cbb;
+            button[type="submit"]:hover,
+            #newFeedbackBtn:hover {
+                background-color: var(--accent-dark);
             }
 
             .success-message {
                 display: none;
-                background-color: #4caf50;
-                color: white;
+                background-color: var(--surface);
+                border: 1px solid var(--border);
                 text-align: center;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                animation: fadeIn 0.5s;
+                padding: 32px;
+                border-radius: var(--radius-lg);
             }
 
-            .success-message > * {
-                margin-bottom: 15px;
+            .success-message h2 {
+                margin: 0 0 10px;
+                font-size: 22px;
             }
 
-            .success-message > *:last-child {
-                margin-bottom: 0;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .language-selector {
-                text-align: right;
-                margin-bottom: 10px;
+            .success-message p {
+                color: var(--muted);
+                margin: 0 0 22px;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="language-selector">
-                <select id="languageSwitcher">
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                </select>
+        <header class="site-header">
+          <div class="wrap">
+            <a class="brand" href="index.html">
+              <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+              Timetable Manager
+            </a>
+            <div class="header-actions">
+              <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-lang="en">EN</button>
+                <button type="button" data-lang="de">DE</button>
+              </div>
+              <button type="button" class="theme-toggle" aria-label="Toggle color theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <line x1="12" y1="2" x2="12" y2="4"></line>
+                  <line x1="12" y1="20" x2="12" y2="22"></line>
+                  <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+                  <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+                  <line x1="2" y1="12" x2="4" y2="12"></line>
+                  <line x1="20" y1="12" x2="22" y2="12"></line>
+                  <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+                  <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                </svg>
+              </button>
+              <a class="btn btn-ghost" data-i18n="navBackHome" href="index.html">Back to home</a>
             </div>
+          </div>
+        </header>
 
+        <section class="feedback-shell">
+          <div class="wrap">
             <div class="form-container" id="formContainer">
-                <h1 id="title">Share Your Feedback</h1>
+                <p class="form-intro" data-i18n="formIntro">Found a bug or have an idea? Let us know.</p>
+                <h1 id="title" data-i18n="title">Share Your Feedback</h1>
                 <form id="feedbackForm">
                     <div class="form-group">
-                        <label for="feedbackType" id="feedbackTypeLabel"
+                        <label for="feedbackType" id="feedbackTypeLabel" data-i18n="feedbackType"
                             >Feedback Type</label
                         >
                         <select id="feedbackType" required>
-                            <option value="" disabled selected id="selectType">
+                            <option value="" disabled selected id="selectType" data-i18n="selectType">
                                 Select feedback type
                             </option>
-                            <option value="bug" id="bug">Bug Report</option>
-                            <option value="enhancement" id="enhancement">
+                            <option value="bug" id="bug" data-i18n="bug">Bug Report</option>
+                            <option value="enhancement" id="enhancement" data-i18n="enhancement">
                                 Feature Request
                             </option>
-                            <option value="other" id="other">Other</option>
+                            <option value="other" id="other" data-i18n="other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="titleInput" id="titleLabel">Title</label>
+                        <label for="titleInput" id="titleLabel" data-i18n="titleLabel">Title</label>
                         <input
                             type="text"
                             id="titleInput"
+                            data-i18n-placeholder="titlePlaceholder"
                             placeholder="Brief summary of your feedback"
                             required
                         />
                     </div>
 
                     <div class="form-group">
-                        <label for="description" id="descriptionLabel"
+                        <label for="description" id="descriptionLabel" data-i18n="descriptionLabel"
                             >Description</label
                         >
                         <textarea
                             id="description"
+                            data-i18n-placeholder="descriptionPlaceholder"
                             placeholder="Please provide details about your feedback..."
                             required
                             rows="5"
                         ></textarea>
                     </div>
 
-                    <button type="submit" id="submitBtn">
+                    <button type="submit" id="submitBtn" data-i18n="submit">
                         Submit Feedback
                     </button>
                 </form>
             </div>
 
             <div class="success-message" id="successMessage">
-                <h2 id="successTitle">Thank You for Your Feedback!</h2>
-                <p id="successText">
+                <h2 id="successTitle" data-i18n="successTitle">Thank You for Your Feedback!</h2>
+                <p id="successText" data-i18n="successMessage">
                     We appreciate your input and will review it shortly.
                 </p>
-                <button id="newFeedbackBtn">Submit Another Feedback</button>
+                <button id="newFeedbackBtn" data-i18n="newFeedback">Submit Another Feedback</button>
             </div>
-        </div>
+          </div>
+        </section>
 
         <script>
-            const translations = {
+            window.TRANSLATIONS = {
                 en: {
+                    formIntro: "Found a bug or have an idea? Let us know.",
                     title: "Share Your Feedback",
                     feedbackType: "Feedback Type",
                     selectType: "Select feedback type",
@@ -219,15 +249,14 @@
                     titleLabel: "Title",
                     titlePlaceholder: "Brief summary of your feedback",
                     descriptionLabel: "Description",
-                    descriptionPlaceholder:
-                        "Please provide details about your feedback...",
+                    descriptionPlaceholder: "Please provide details about your feedback...",
                     submit: "Submit Feedback",
                     successTitle: "Thank You for Your Feedback!",
-                    successMessage:
-                        "We appreciate your input and will review it shortly.",
+                    successMessage: "We appreciate your input and will review it shortly.",
                     newFeedback: "Submit Another Feedback",
                 },
                 de: {
+                    formIntro: "Hast du einen Fehler gefunden oder eine Idee? Lass es uns wissen.",
                     title: "Teile dein Feedback",
                     feedbackType: "Feedback-Typ",
                     selectType: "Feedback-Typ auswählen",
@@ -237,70 +266,18 @@
                     titleLabel: "Titel",
                     titlePlaceholder: "Kurze Zusammenfassung",
                     descriptionLabel: "Beschreibung",
-                    descriptionPlaceholder:
-                        "Bitte gebe Details zu deinem Feedback an...",
+                    descriptionPlaceholder: "Bitte gebe Details zu deinem Feedback an...",
                     submit: "Feedback senden",
                     successTitle: "Danke für dein Feedback!",
                     successMessage: "Vielen Dank für dein Feedback!",
                     newFeedback: "Weiteres Feedback senden",
                 },
             };
+        </script>
+        <script src="assets/js/theme.js"></script>
+        <script src="assets/js/i18n.js"></script>
 
-            function getQueryParam(param) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(param);
-            }
-
-            function applyLanguage(lang) {
-                if (!translations[lang]) lang = "en";
-
-                document.getElementById("title").textContent =
-                    translations[lang].title;
-                document.getElementById("feedbackTypeLabel").textContent =
-                    translations[lang].feedbackType;
-                document.getElementById("selectType").textContent =
-                    translations[lang].selectType;
-                document.getElementById("bug").textContent =
-                    translations[lang].bug;
-                document.getElementById("enhancement").textContent =
-                    translations[lang].enhancement;
-                document.getElementById("other").textContent =
-                    translations[lang].other;
-                document.getElementById("titleLabel").textContent =
-                    translations[lang].titleLabel;
-                document.getElementById("titleInput").placeholder =
-                    translations[lang].titlePlaceholder;
-                document.getElementById("descriptionLabel").textContent =
-                    translations[lang].descriptionLabel;
-                document.getElementById("description").placeholder =
-                    translations[lang].descriptionPlaceholder;
-                document.getElementById("submitBtn").textContent =
-                    translations[lang].submit;
-                document.getElementById("successTitle").textContent =
-                    translations[lang].successTitle;
-                document.getElementById("successText").textContent =
-                    translations[lang].successMessage;
-                document.getElementById("newFeedbackBtn").textContent =
-                    translations[lang].newFeedback;
-
-                document.getElementById("languageSwitcher").value = lang;
-            }
-
-            document.addEventListener("DOMContentLoaded", function () {
-                let lang = getQueryParam("lang") || "en";
-                applyLanguage(lang);
-            });
-
-            document
-                .getElementById("languageSwitcher")
-                .addEventListener("change", function () {
-                    const newLang = this.value;
-                    const newUrl = new URL(window.location);
-                    newUrl.searchParams.set("lang", newLang);
-                    window.history.pushState({}, "", newUrl);
-                    applyLanguage(newLang);
-                });
-
+        <script>
             document
                 .getElementById("feedbackForm")
                 .addEventListener("submit", async function (e) {
@@ -313,6 +290,8 @@
                         document.getElementById("description").value;
                     const issueType =
                         document.getElementById("feedbackType").value;
+                    const currentLang =
+                        (document.documentElement.lang || "en").split("-")[0];
 
                     const githubIssue = {
                         title: issueTitle,
@@ -320,7 +299,7 @@
                         labels: [
                             issueType,
                             "external-feedback-issue",
-                            `lang-${document.getElementById("languageSwitcher").value}`,
+                            `lang-${currentLang}`,
                         ],
                     };
 
@@ -343,6 +322,8 @@
                         alert(
                             "There was an error submitting your feedback. Please try again.",
                         );
+                    } finally {
+                        document.getElementById("submitBtn").disabled = false;
                     }
                 });
 
