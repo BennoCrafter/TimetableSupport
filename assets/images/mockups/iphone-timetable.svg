@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 610" fill="none">
+  <rect x="0" y="0" width="300" height="610" rx="54" fill="#14161f"/>
+  <rect x="6" y="6" width="288" height="598" rx="48" fill="#0b0c10"/>
+  <rect x="14" y="14" width="272" height="582" rx="42" fill="#ffffff"/>
+
+  <!-- Dynamic island -->
+  <rect x="115" y="30" width="70" height="22" rx="11" fill="#0b0c10"/>
+
+  <!-- Status / title bar -->
+  <rect x="34" y="70" width="110" height="14" rx="7" fill="#e7e9f0"/>
+  <circle cx="252" cy="77" r="14" fill="#eef1ff" stroke="#3653ff" stroke-width="1.5"/>
+
+  <!-- Day tabs -->
+  <rect x="34" y="104" width="40" height="26" rx="13" fill="#3653ff"/>
+  <rect x="80" y="104" width="40" height="26" rx="13" fill="#f2f3f7"/>
+  <rect x="126" y="104" width="40" height="26" rx="13" fill="#f2f3f7"/>
+  <rect x="172" y="104" width="40" height="26" rx="13" fill="#f2f3f7"/>
+  <rect x="218" y="104" width="40" height="26" rx="13" fill="#f2f3f7"/>
+
+  <!-- Timetable grid -->
+  <line x1="34" y1="160" x2="266" y2="160" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="210" x2="266" y2="210" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="260" x2="266" y2="260" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="310" x2="266" y2="310" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="360" x2="266" y2="360" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="410" x2="266" y2="410" stroke="#eef0f4" stroke-width="1.5"/>
+  <line x1="34" y1="460" x2="266" y2="460" stroke="#eef0f4" stroke-width="1.5"/>
+
+  <rect x="44" y="166" width="150" height="38" rx="9" fill="#3653ff" fill-opacity="0.9"/>
+  <rect x="44" y="216" width="90" height="38" rx="9" fill="#22c55e" fill-opacity="0.75"/>
+  <rect x="150" y="266" width="110" height="38" rx="9" fill="#fb923c" fill-opacity="0.8"/>
+  <rect x="44" y="316" width="130" height="38" rx="9" fill="#3653ff" fill-opacity="0.55"/>
+  <rect x="90" y="366" width="150" height="38" rx="9" fill="#22c55e" fill-opacity="0.5"/>
+
+  <rect x="120" y="590" width="60" height="5" rx="2.5" fill="#c7c9d6"/>
+</svg>

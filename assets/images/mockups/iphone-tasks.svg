@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 610" fill="none">
+  <!-- Replace this file with a real "Tasks" screenshot export (keep the same filename to update the site automatically). -->
+  <rect x="0" y="0" width="300" height="610" rx="54" fill="#14161f"/>
+  <rect x="6" y="6" width="288" height="598" rx="48" fill="#0b0c10"/>
+  <rect x="14" y="14" width="272" height="582" rx="42" fill="#ffffff"/>
+
+  <rect x="115" y="30" width="70" height="22" rx="11" fill="#0b0c10"/>
+
+  <rect x="34" y="70" width="90" height="16" rx="8" fill="#e7e9f0"/>
+  <circle cx="252" cy="78" r="14" fill="#eef1ff" stroke="#3653ff" stroke-width="1.5"/>
+
+  <!-- task rows -->
+  <g>
+    <circle cx="48" cy="122" r="11" fill="none" stroke="#3653ff" stroke-width="2"/>
+    <path d="M43 122l4 4 8-8" stroke="#3653ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="70" y="112" width="130" height="10" rx="5" fill="#c7c9d6"/>
+    <rect x="70" y="128" width="80" height="8" rx="4" fill="#eef0f4"/>
+  </g>
+
+  <line x1="34" y1="156" x2="266" y2="156" stroke="#f2f3f7" stroke-width="1.5"/>
+
+  <g>
+    <circle cx="48" cy="182" r="11" fill="none" stroke="#c7c9d6" stroke-width="2"/>
+    <rect x="70" y="172" width="150" height="10" rx="5" fill="#4b4f5c"/>
+    <rect x="70" y="188" width="60" height="8" rx="4" fill="#eef0f4"/>
+    <circle cx="252" cy="182" r="10" fill="#eef1ff" stroke="#3653ff" stroke-width="1.5"/>
+    <circle cx="242" cy="182" r="10" fill="#e5fbea" stroke="#22c55e" stroke-width="1.5"/>
+  </g>
+
+  <line x1="34" y1="216" x2="266" y2="216" stroke="#f2f3f7" stroke-width="1.5"/>
+
+  <g>
+    <circle cx="48" cy="242" r="11" fill="none" stroke="#c7c9d6" stroke-width="2"/>
+    <rect x="70" y="232" width="110" height="10" rx="5" fill="#4b4f5c"/>
+    <rect x="70" y="248" width="90" height="8" rx="4" fill="#eef0f4"/>
+    <rect x="220" y="234" width="46" height="18" rx="9" fill="#fff4e8"/>
+  </g>
+
+  <line x1="34" y1="276" x2="266" y2="276" stroke="#f2f3f7" stroke-width="1.5"/>
+
+  <g>
+    <circle cx="48" cy="302" r="11" fill="#3653ff"/>
+    <path d="M43 302l4 4 8-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="70" y="292" width="120" height="10" rx="5" fill="#c7c9d6"/>
+    <rect x="70" y="308" width="70" height="8" rx="4" fill="#eef0f4"/>
+  </g>
+
+  <line x1="34" y1="336" x2="266" y2="336" stroke="#f2f3f7" stroke-width="1.5"/>
+
+  <g>
+    <circle cx="48" cy="362" r="11" fill="none" stroke="#c7c9d6" stroke-width="2"/>
+    <rect x="70" y="352" width="140" height="10" rx="5" fill="#4b4f5c"/>
+    <rect x="70" y="368" width="55" height="8" rx="4" fill="#eef0f4"/>
+  </g>
+
+  <!-- floating add button -->
+  <circle cx="238" cy="536" r="24" fill="#3653ff"/>
+  <path d="M238 526v20M228 536h20" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+
+  <rect x="120" y="590" width="60" height="5" rx="2.5" fill="#c7c9d6"/>
+</svg>

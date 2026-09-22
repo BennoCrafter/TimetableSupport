@@ -1,56 +1,117 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Imprint - Timetable Manager</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-            /* Main content styles */
-            .content {
-                padding: 20px;
-                max-width: 900px;
-                margin: 0 auto;
-                background-color: white;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-            }
-        </style>
-        <!--====== Favicon Icon ======-->
-        <link
-            rel="shortcut icon"
-            href="assets/images/favicon.png"
-            type="image/svg"
-        />
-    </head>
-    <body>
-        <header>
-            <h1>Imprint</h1>
-        </header>
-
-        <div class="content">
-            <address style="font-style: normal; line-height: 1.6; color: #333">
-                <p>
-                    Benno Productions<br />Baumeister<br />
-                    John-Skilton-Straße 8<br />97074 Würzburg<br /><br />
-                    <a href="mailto:timetablemanager.contact@gmail.com">
-                        timetablemanager.contact@gmail.com </a
-                    ><br /><br />
-                    Represented by: Dr. Joachim Baumeister
-                </p>
-            </address>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("tm-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imprint - Timetable Manager</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+          Timetable Manager
+        </a>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="de">DE</button>
+          </div>
+          <button type="button" class="theme-toggle" aria-label="Toggle color theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="4"></line>
+              <line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+              <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line>
+              <line x1="20" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+              <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+          <a
+            class="btn btn-primary"
+            data-i18n="navGetApp"
+            href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
+            rel="nofollow noopener"
+            target="_blank"
+            >Get on App Store</a
+          >
         </div>
+      </div>
+    </header>
 
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2025 Timetable Manager. All rights reserved.</p>
-                <p>
-                    <a href="privacy-policy.html">Privacy Policy</a> |
-                    <a href="mailto:timetablemanager.contact@gmail.com"
-                        >Contact Us</a
-                    >
-                </p>
-            </div>
-        </footer>
-    </body>
+    <section class="page-hero">
+      <div class="wrap"><h1 data-i18n="pageTitle">Imprint</h1></div>
+    </section>
+
+    <section class="content-card">
+      <div class="wrap">
+        <address>
+          Benno Productions<br />Baumeister<br />
+          John-Skilton-Straße 8<br />97074 Würzburg<br /><br />
+          <a href="mailto:timetablemanager.contact@gmail.com">timetablemanager.contact@gmail.com</a><br /><br />
+          <span data-i18n="representedBy">Represented by: Dr. Joachim Baumeister</span>
+        </address>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <a class="footer-brand" href="index.html">
+              <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+              Timetable Manager
+            </a>
+            <p class="footer-tagline" data-i18n="footerTagline">Perfect for everyday life.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="mailto:timetablemanager.contact@gmail.com?subject=Timetable%20Manager%20App%20Support" data-i18n="footerContact">Contact Us</a></li>
+            <li><a href="privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a></li>
+            <li><a href="imprint.html" data-i18n="footerImprint">Imprint</a></li>
+            <li><a href="feedback.html" data-i18n="footerFeedback">Give Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom" data-i18n="footerCopyright">&copy; 2027 Timetable Manager. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      window.TRANSLATIONS = {
+        en: {
+          pageTitle: "Imprint",
+          representedBy: "Represented by: Dr. Joachim Baumeister",
+        },
+        de: {
+          pageTitle: "Impressum",
+          representedBy: "Vertreten durch: Dr. Joachim Baumeister",
+        },
+      };
+    </script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/i18n.js"></script>
+  </body>
 </html>

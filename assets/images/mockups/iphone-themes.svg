@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 610" fill="none">
+  <!-- Replace this file with a real "Themes" screenshot export (keep the same filename to update the site automatically). -->
+  <rect x="0" y="0" width="300" height="610" rx="54" fill="#14161f"/>
+  <rect x="6" y="6" width="288" height="598" rx="48" fill="#0b0c10"/>
+  <rect x="14" y="14" width="272" height="582" rx="42" fill="#ffffff"/>
+
+  <rect x="115" y="30" width="70" height="22" rx="11" fill="#0b0c10"/>
+
+  <rect x="34" y="70" width="110" height="16" rx="8" fill="#e7e9f0"/>
+
+  <!-- live preview card -->
+  <rect x="34" y="104" width="232" height="120" rx="16" fill="#eef1ff"/>
+  <rect x="52" y="122" width="90" height="10" rx="5" fill="#3653ff"/>
+  <rect x="52" y="142" width="196" height="26" rx="8" fill="#3653ff" fill-opacity="0.85"/>
+  <rect x="52" y="174" width="140" height="26" rx="8" fill="#3653ff" fill-opacity="0.5"/>
+
+  <rect x="34" y="246" width="140" height="12" rx="6" fill="#9aa0ae"/>
+
+  <!-- color swatches grid -->
+  <circle cx="52" cy="290" r="18" fill="#3653ff"/>
+  <circle cx="52" cy="290" r="23" fill="none" stroke="#3653ff" stroke-width="2"/>
+  <circle cx="104" cy="290" r="18" fill="#22c55e"/>
+  <circle cx="156" cy="290" r="18" fill="#fb923c"/>
+  <circle cx="208" cy="290" r="18" fill="#ef4444"/>
+  <circle cx="248" cy="290" r="18" fill="#a855f7"/>
+
+  <circle cx="52" cy="338" r="18" fill="#eab308"/>
+  <circle cx="104" cy="338" r="18" fill="#14b8a6"/>
+  <circle cx="156" cy="338" r="18" fill="#ec4899"/>
+  <circle cx="208" cy="338" r="18" fill="#64748b"/>
+  <circle cx="248" cy="338" r="18" fill="#0ea5e9"/>
+
+  <line x1="34" y1="382" x2="266" y2="382" stroke="#f2f3f7" stroke-width="1.5"/>
+
+  <rect x="34" y="404" width="150" height="12" rx="6" fill="#4b4f5c"/>
+  <rect x="34" y="428" width="200" height="9" rx="4.5" fill="#c7c9d6"/>
+
+  <rect x="120" y="590" width="60" height="5" rx="2.5" fill="#c7c9d6"/>
+</svg>
