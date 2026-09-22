@@ -10,7 +10,7 @@
       footerPrivacy: "Privacy Policy",
       footerImprint: "Imprint",
       footerFeedback: "Give Feedback",
-      footerCopyright: "© 2025 Timetable Manager. All rights reserved.",
+      footerCopyright: "© 2027 Timetable Manager. All rights reserved.",
     },
     de: {
       navGetApp: "Laden im App Store",
@@ -20,7 +20,7 @@
       footerPrivacy: "Datenschutz",
       footerImprint: "Impressum",
       footerFeedback: "Feedback geben",
-      footerCopyright: "© 2025 Timetable Manager. Alle Rechte vorbehalten.",
+      footerCopyright: "© 2027 Timetable Manager. Alle Rechte vorbehalten.",
     },
   };
 
