@@ -57,6 +57,10 @@
       btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
     });
 
+    document.querySelectorAll("[data-src-" + lang + "]").forEach(function (img) {
+      img.src = img.getAttribute("data-src-" + lang);
+    });
+
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
