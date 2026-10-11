@@ -1,18 +1,18 @@
 // Shared site header — edit here, it renders on every page with <header class="site-header"></header>.
 // The right-hand button is "Get on App Store" by default; <header class="site-header" data-cta="home">
-// shows "Back to home" instead. Must load before theme.js binds (DOMContentLoaded) and before i18n.js.
+// shows "Back to home" instead. Runs before DOMContentLoaded, when theme.js and i18n.js bind to it.
 (function () {
   var header = document.querySelector(".site-header");
 
   var cta =
     header.getAttribute("data-cta") === "home"
-      ? `<a class="btn btn-ghost" data-i18n="navBackHome" href="index.html">Back to home</a>`
+      ? `<a class="btn btn-ghost" data-i18n="navBackHome" href="/">Back to home</a>`
       : `<a class="btn btn-primary" data-i18n="navGetApp" href="https://apps.apple.com/us/app/timetable-manager/id6738605424" rel="nofollow noopener" target="_blank">Get on App Store</a>`;
 
   header.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="index.html">
-        <img src="assets/images/logo/logo.png" alt="Timetable Manager logo" />
+      <a class="brand" href="/">
+        <img src="/assets/images/logo/logo.png" alt="Timetable Manager logo" />
         Timetable Manager
       </a>
       <div class="header-actions">

@@ -1,6 +1,6 @@
 # Timetable Manager — Website
 
-Website for [Timetable Manager](https://apps.apple.com/us/app/timetable-manager/id6738605424) iOS/iPadOS/macOS app. Static HTML/CSS/JS, deployed on Vercel.
+[Website](https://timetablemanager.app) for [Timetable Manager](https://apps.apple.com/us/app/timetable-manager/id6738605424) iOS/iPadOS app. Static HTML/CSS/JS, deployed on Vercel.
 
 No build step and no dependencies: what's in the repo is what gets served.
 
@@ -54,9 +54,3 @@ Every page uses the same skeleton. Script order matters: header/footer must exis
 **Translations:** mark an element with `data-i18n="key"` (text) or `data-i18n-placeholder="key"`, and add `key` to the page's `window.TRANSLATIONS` for both `en` and `de`. Strings used on every page go in `COMMON` in `i18n.js`. Localized images use `data-src-en` / `data-src-de`.
 
 **Theme:** `theme.js` stores the choice in `localStorage["tm-theme"]`; with no choice the OS setting applies. Colors come from CSS variables, so new components should use `var(--ink)`, `var(--surface)`, `var(--accent)` etc. and get dark mode for free.
-
-## Adding things
-
-- **A new page:** copy `imprint.html`, change `<title>`, the content and its `TRANSLATIONS`. Link it from the footer in `footer.js` (and add the link text to `COMMON` in `i18n.js`).
-- **A header/footer change:** edit `header.js` / `footer.js` once; it applies everywhere.
-- **A new feedback type:** add the `<option>` in `feedback.html` and its label to `ALLOWED_LABELS` in `api/create-issue.js` (unknown labels are dropped).
