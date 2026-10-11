@@ -334,6 +334,11 @@ section {
   padding: 30px 26px;
 }
 
+/* Lead card: spans the whole row, so the remaining cards fill even rows. */
+.feature-card-wide {
+  grid-column: 1 / -1;
+}
+
 .feature-icon {
   width: 46px;
   height: 46px;
