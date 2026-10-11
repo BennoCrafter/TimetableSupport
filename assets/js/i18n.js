@@ -5,6 +5,7 @@
     en: {
       navGetApp: "Get on App Store",
       navBackHome: "Back to home",
+      navKofi: "Support me on Ko-fi",
       footerTagline: "Perfect for everyday life.",
       footerContact: "Contact Us",
       footerPrivacy: "Privacy Policy",
@@ -15,6 +16,7 @@
     de: {
       navGetApp: "Laden im App Store",
       navBackHome: "Zurück zur Startseite",
+      navKofi: "Unterstütze mich auf Ko-fi",
       footerTagline: "Perfekt für den Alltag.",
       footerContact: "Kontakt",
       footerPrivacy: "Datenschutz",
