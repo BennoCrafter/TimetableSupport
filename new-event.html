@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Import an event...</title>
         <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,21 +44,14 @@
             }
         </style>
         <script>
-            window.onload = function () {
-                const params = new URLSearchParams(window.location.search);
-                console.log(params);
-                redirect();
-            };
-
+            // Shared event links open here and are handed to the app via its URL scheme,
+            // keeping the query string (event details) intact.
             function redirect() {
-                window.location.href = convertURL(window.location.search);
+                const params = new URLSearchParams(window.location.search);
+                window.location.href = `timetablemanager://new-event?${params}`;
             }
 
-            function convertURL(url) {
-                const params = new URLSearchParams(url);
-                const redirectUrl = `timetablemanager://new-event?${params}`;
-                return redirectUrl;
-            }
+            window.onload = redirect;
         </script>
     </head>
     <body>

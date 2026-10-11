@@ -20,6 +20,8 @@
     Arial, sans-serif;
 }
 
+/* Dark tokens appear twice on purpose: once for "follow the OS" (no data-theme set)
+   and once for the explicit toggle. CSS can't share a block between the two. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --ink: #eef0f6;
@@ -238,19 +240,6 @@ a {
   align-items: center;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-bottom: 20px;
-}
-
 .hero h1 {
   font-size: 48px;
   line-height: 1.12;
@@ -271,11 +260,6 @@ a {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-}
-
-.hero-note {
-  font-size: 14px;
-  color: var(--muted);
 }
 
 .hero-visual {
@@ -306,12 +290,6 @@ section {
   letter-spacing: -0.015em;
   margin: 0 0 14px;
   font-weight: 700;
-}
-
-.section-head p {
-  color: var(--muted);
-  font-size: 17px;
-  margin: 0;
 }
 
 .showcase {
@@ -375,40 +353,6 @@ section {
   font-size: 15px;
 }
 
-/* ---------- Trust strip ---------- */
-
-.trust-strip {
-  padding: 0 0 88px;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.trust-item {
-  padding: 0 28px;
-  border-left: 1px solid var(--border);
-}
-
-.trust-item:first-child {
-  border-left: none;
-  padding-left: 0;
-}
-
-.trust-item h3 {
-  font-size: 15px;
-  margin: 0 0 6px;
-  font-weight: 650;
-}
-
-.trust-item p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 /* ---------- CTA band ---------- */
 
 .cta-band {
@@ -419,12 +363,6 @@ section {
   font-size: 30px;
   margin: 0 0 14px;
   letter-spacing: -0.015em;
-}
-
-.cta-band p {
-  color: var(--muted);
-  margin: 0 0 30px;
-  font-size: 17px;
 }
 
 /* ---------- Footer ---------- */
@@ -581,17 +519,6 @@ section {
 
   .showcase-strip img {
     height: 420px;
-  }
-
-  .trust-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .trust-item {
-    border-left: none;
-    padding-left: 0;
-    text-align: center;
   }
 
   .hero h1 {

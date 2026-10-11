@@ -1,3 +1,7 @@
+// EN/DE translation. Elements opt in with data-i18n="key" (text) or data-i18n-placeholder="key";
+// images swap source via data-src-en / data-src-de. Strings shared by every page (header, footer)
+// live in COMMON below; page-specific strings come from window.TRANSLATIONS defined inline in each page.
+// Language priority: ?lang= query param, then saved choice, then browser language.
 (function () {
   var STORAGE_KEY = "tm-lang";
 
@@ -66,8 +70,6 @@
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
-
-    document.dispatchEvent(new CustomEvent("tm:langchange", { detail: { lang: lang } }));
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -79,6 +81,4 @@
       });
     });
   });
-
-  window.tmApplyLang = apply;
 })();
