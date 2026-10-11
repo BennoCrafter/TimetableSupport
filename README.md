@@ -7,12 +7,13 @@ No build step on deploy and no dependencies: what's in the repo is what gets ser
 ## Develop
 
 ```sh
-python3 -m http.server 8000      # then open http://localhost:8000/index.html
+open index.html                  # works without a server (all paths are relative)
+python3 -m http.server 8000      # or serve it: http://localhost:8000/index.html
 node scripts/build-de.mjs        # after editing index.html or translations/home.de.json
 node --test tests/               # API tests + checks de/index.html is up to date (Node 20+)
 ```
 
-The feedback form needs the `/api` function, which only runs on Vercel (`vercel dev` locally, with `GITHUB_TOKEN` set).
+Keep paths relative (`assets/...`, never `/assets/...`) so the site also works from `file://` and under a sub-path like GitHub Pages; `header.js`/`footer.js` resolve theirs from their own script URL. The feedback form needs the `/api` function, which only runs on Vercel (`vercel dev` locally, with `GITHUB_TOKEN` set).
 `vercel.json` enables `cleanUrls`, so production serves `/imprint` as well as `/imprint.html`.
 
 ## Layout

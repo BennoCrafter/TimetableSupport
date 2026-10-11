@@ -1,11 +1,15 @@
 // Shared site footer — edit here, it renders on every page with <footer class="site-footer"></footer>.
 // i18n.js translates its data-i18n strings on DOMContentLoaded.
-document.querySelector(".site-footer").innerHTML = `
+(function () {
+  // Site root, derived from this script's own URL (…/assets/js/x.js → …/), so links and images work
+  // from any page depth and without a server (file://) or under a sub-path (GitHub Pages).
+  var root = new URL("../../", document.currentScript.src).href;
+  document.querySelector(".site-footer").innerHTML = `
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <a class="footer-brand" href="/">
-          <img src="/assets/images/logo/logo.png" alt="Timetable Manager logo" />
+        <a class="footer-brand" href="${root}index.html">
+          <img src="${root}assets/images/logo/logo.png" alt="Timetable Manager logo" />
           Timetable Manager
         </a>
         <p class="footer-tagline" data-i18n="footerTagline">Perfect for everyday life.</p>
@@ -26,11 +30,12 @@ document.querySelector(".site-footer").innerHTML = `
       </div>
       <ul class="footer-links">
         <li><a href="mailto:timetablemanager.contact@gmail.com?subject=Timetable%20Manager%20App%20Support" data-i18n="footerContact">Contact Us</a></li>
-        <li><a href="/privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a></li>
-        <li><a href="/imprint.html" data-i18n="footerImprint">Imprint</a></li>
-        <li><a href="/feedback.html" data-i18n="footerFeedback">Give Feedback</a></li>
+        <li><a href="${root}privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a></li>
+        <li><a href="${root}imprint.html" data-i18n="footerImprint">Imprint</a></li>
+        <li><a href="${root}feedback.html" data-i18n="footerFeedback">Give Feedback</a></li>
       </ul>
     </div>
     <div class="footer-bottom" data-i18n="footerCopyright">&copy; 2027 Timetable Manager. All rights reserved.</div>
   </div>
 `;
+})();

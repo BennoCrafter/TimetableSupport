@@ -32,7 +32,9 @@ export function buildGerman(
   checkComplete(html, de, i18nJs);
 
   let out = html
-    .replace('<html lang="en" data-url-de="/de/">', '<html lang="de" data-url-en="/">')
+    .replace('<html lang="en" data-url-de="de/index.html">', '<html lang="de" data-url-en="../index.html">')
+    // de/ is one folder deeper: relative URLs need a ../ (absolute https:, #, mailto: etc. stay as they are)
+    .replace(/(\s(?:href|src|data-src-\w+)=")(?![a-z]+:|[#/])/g, "$1../")
     .replace(/(<link rel="canonical" href=")[^"]*/, `$1${SITE}/de/`)
     .replace(/(<meta property="og:url" content=")[^"]*/, `$1${SITE}/de/`)
     .replace(/(<meta property="og:image" content="[^"]*\/)en\//, "$1de/")
