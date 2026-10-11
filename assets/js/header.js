@@ -6,14 +6,14 @@
 
   var cta =
     header.getAttribute("data-cta") === "home"
-      ? `<a class="btn btn-ghost" data-i18n="navBackHome" href="/">Back to home</a>`
-      : `<a class="btn btn-primary" data-i18n="navGetApp" href="https://apps.apple.com/us/app/timetable-manager/id6738605424" rel="nofollow noopener" target="_blank">Get on App Store</a>`;
+      ? `<a class="btn btn-ghost header-cta" data-i18n="navBackHome" href="/">Back to home</a>`
+      : `<a class="btn btn-primary header-cta" data-i18n="navGetApp" href="https://apps.apple.com/us/app/timetable-manager/id6738605424" rel="nofollow noopener" target="_blank">Get on App Store</a>`;
 
   header.innerHTML = `
     <div class="wrap">
       <a class="brand" href="/">
         <img src="/assets/images/logo/logo.png" alt="Timetable Manager logo" />
-        Timetable Manager
+        <span class="brand-name">Timetable Manager</span>
       </a>
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Language">

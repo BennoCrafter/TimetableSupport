@@ -1,21 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-url-de="/de/">
+  <!-- English homepage. The German one (/de/) is generated from this file plus translations/home.de.json:
+       after editing either, run `node scripts/build-de.mjs`. -->
   <head>
     <meta charset="UTF-8" />
-    <script src="assets/js/theme.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/i18n.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timetable Manager - Your timetable, tasks and exams in one place</title>
+    <title data-i18n="metaTitle">Timetable Manager - Your timetable, tasks and exams in one place</title>
 
     <meta
       name="description"
+      data-i18n-content="metaDescription"
       content="Timetable Manager is a clear, intuitive way to organize your timetable, manage tasks, and track exams — free on iPhone, iPad and Mac. Nothing collected, nothing tracked."
     />
 
     <link rel="canonical" href="https://www.timetablemanager.app/" />
+    <link rel="alternate" hreflang="en" href="https://www.timetablemanager.app/" />
+    <link rel="alternate" hreflang="de" href="https://www.timetablemanager.app/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.timetablemanager.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Timetable Manager" />
-    <meta property="og:title" content="Timetable Manager - Your timetable, tasks and exams in one place" />
-    <meta property="og:description" content="Timetable Manager is a clear, intuitive way to organize your timetable, manage tasks, and track exams — free on iPhone, iPad and Mac. Nothing collected, nothing tracked." />
+    <meta property="og:title" data-i18n-content="metaTitle" content="Timetable Manager - Your timetable, tasks and exams in one place" />
+    <meta property="og:description" data-i18n-content="metaDescription" content="Timetable Manager is a clear, intuitive way to organize your timetable, manage tasks, and track exams — free on iPhone, iPad and Mac. Nothing collected, nothing tracked." />
     <meta property="og:url" content="https://www.timetablemanager.app/" />
     <meta property="og:image" content="https://www.timetablemanager.app/assets/images/screenshots/hero/en/dashboard.webp" />
     <meta property="og:image:width" content="1600" />
@@ -24,14 +31,14 @@
     <script type="application/ld+json">
       {"@context": "https://schema.org", "@type": "WebSite", "name": "Timetable Manager", "url": "https://www.timetablemanager.app/"}
     </script>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -56,9 +63,10 @@
         <div class="hero-visual">
           <img
             class="dashboard-shot"
-            data-src-en="assets/images/screenshots/hero/en/dashboard.webp"
-            data-src-de="assets/images/screenshots/hero/de/dashboard.webp"
-            src="assets/images/screenshots/hero/en/dashboard.webp"
+            data-src-en="/assets/images/screenshots/hero/en/dashboard.webp"
+            data-src-de="/assets/images/screenshots/hero/de/dashboard.webp"
+            src="/assets/images/screenshots/hero/en/dashboard.webp"
+            data-i18n-alt="heroAlt"
             alt="Timetable Manager week dashboard on iPad, with classes, tasks and grades together"
           />
         </div>
@@ -74,51 +82,58 @@
       <div class="showcase-strip">
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/01-dayview.webp"
-          data-src-de="assets/images/screenshots/iphone/de/01-dayview.webp"
-          src="assets/images/screenshots/iphone/en/01-dayview.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/01-dayview.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/01-dayview.webp"
+          src="/assets/images/screenshots/iphone/en/01-dayview.webp"
+          data-i18n-alt="shotDayAlt"
           alt="Day view: every class, color-coded and right on time"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/06-creator.webp"
-          data-src-de="assets/images/screenshots/iphone/de/06-creator.webp"
-          src="assets/images/screenshots/iphone/en/06-creator.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/06-creator.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/06-creator.webp"
+          src="/assets/images/screenshots/iphone/en/06-creator.webp"
+          data-i18n-alt="shotCreatorAlt"
           alt="Build schedule: set your subjects and colors once"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/03-theming.webp"
-          data-src-de="assets/images/screenshots/iphone/de/03-theming.webp"
-          src="assets/images/screenshots/iphone/en/03-theming.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/03-theming.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/03-theming.webp"
+          src="/assets/images/screenshots/iphone/en/03-theming.webp"
+          data-i18n-alt="shotThemesAlt"
           alt="Themes: pick a theme, or design your own"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/04-tasks.webp"
-          data-src-de="assets/images/screenshots/iphone/de/04-tasks.webp"
-          src="assets/images/screenshots/iphone/en/04-tasks.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/04-tasks.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/04-tasks.webp"
+          src="/assets/images/screenshots/iphone/en/04-tasks.webp"
+          data-i18n-alt="shotTasksAlt"
           alt="Tasks: every assignment, grouped by when it's due"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/05-grades.webp"
-          data-src-de="assets/images/screenshots/iphone/de/05-grades.webp"
-          src="assets/images/screenshots/iphone/en/05-grades.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/05-grades.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/05-grades.webp"
+          src="/assets/images/screenshots/iphone/en/05-grades.webp"
+          data-i18n-alt="shotGradesAlt"
           alt="Grades: see your average and progress, by subject"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/02-widgets.webp"
-          data-src-de="assets/images/screenshots/iphone/de/02-widgets.webp"
-          src="assets/images/screenshots/iphone/en/02-widgets.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/02-widgets.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/02-widgets.webp"
+          src="/assets/images/screenshots/iphone/en/02-widgets.webp"
+          data-i18n-alt="shotWidgetsAlt"
           alt="Widgets: tasks, next class and grades, right on your Home Screen"
         />
         <img
           class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/07-share.webp"
-          data-src-de="assets/images/screenshots/iphone/de/07-share.webp"
-          src="assets/images/screenshots/iphone/en/07-share.webp"
+          data-src-en="/assets/images/screenshots/iphone/en/07-share.webp"
+          data-src-de="/assets/images/screenshots/iphone/de/07-share.webp"
+          src="/assets/images/screenshots/iphone/en/07-share.webp"
+          data-i18n-alt="shotShareAlt"
           alt="Sharing: keep your whole friend group on the same page"
         />
       </div>
@@ -229,56 +244,7 @@
 
     <footer class="site-footer"></footer>
 
-    <script>
-      window.TRANSLATIONS = {
-        en: {
-          heroTitle: "Your timetable, tasks, and exams — one clear place.",
-          heroLede:
-            "Timetable Manager gives you an intuitive way to plan your week, manage tasks with the people around you, and keep every exam in view. No setup, no clutter, nothing tracked.",
-          showcaseHeading: "See it in action",
-          featuresHeading: "Built to keep you ahead",
-          feature1Title: "Your day, at a glance",
-          feature1Desc: "Every class, color-coded and right on time, in a clear day and week view.",
-          feature2Title: "Build your schedule in minutes",
-          feature2Desc: "Set your subjects and colors once, and your whole timetable is ready.",
-          feature3Title: "Never miss a deadline",
-          feature3Desc: "Every assignment grouped by when it's due, shareable with classmates and friends.",
-          feature4Title: "Track your grades",
-          feature4Desc: "See your average and progress, by subject, as every grade comes in.",
-          feature5Title: "Make it yours",
-          feature5Desc: "Pick a theme, or design your own color palette for every subject.",
-          feature6Title: "Right on your Home Screen",
-          feature6Desc: "Tasks, next class and grades, always visible with Home Screen widgets.",
-          feature7Title: "No ads and pro features",
-          feature7Desc: "TimetableManager was created to be ad-free and offer all features for free.",
-          ctaHeading: "Ready to get organized?",
-        },
-        de: {
-          heroTitle: "Dein Stundenplan, deine Aufgaben und Prüfungen — an einem Ort.",
-          heroLede:
-            "Timetable Manager bietet dir eine intuitive Möglichkeit, deine Woche zu planen, Aufgaben gemeinsam mit anderen zu verwalten und jede Prüfung im Blick zu behalten. Ohne Einrichtung, ohne Ballast, ohne Tracking.",
-          showcaseHeading: "So sieht's aus",
-          featuresHeading: "Damit du immer den Überblick behältst",
-          feature1Title: "Dein Tag auf einen Blick",
-          feature1Desc: "Jede Stunde farblich markiert und genau zur richtigen Zeit, in einer klaren Tages- und Wochenansicht.",
-          feature2Title: "Erstelle deinen Stundenplan in Minuten",
-          feature2Desc: "Lege einmal deine Fächer und Farben fest — und dein ganzer Stundenplan steht.",
-          feature3Title: "Verpasse keine Frist mehr",
-          feature3Desc: "Jede Aufgabe gruppiert nach Fälligkeit, teilbar mit Mitschülern und Freunden.",
-          feature4Title: "Behalte deine Noten im Blick",
-          feature4Desc: "Sieh deinen Schnitt und deine Entwicklung pro Fach, sobald eine neue Note kommt.",
-          feature5Title: "Ganz in deinem Stil",
-          feature5Desc: "Wähle ein Thema oder gestalte deine eigene Farbpalette für jedes Fach.",
-          feature6Title: "Direkt auf deinem Homescreen",
-          feature6Desc: "Aufgaben, nächste Stunde und Noten immer sichtbar — mit Homescreen-Widgets.",
-          feature7Title: "Keine Werbung und Pro Features",
-          feature7Desc: "TimetableManager wurde entwickelt um eine werbefreie Stundenplan-App ganz ohne Pro-Features anzubieten.",
-          ctaHeading: "Bereit, organisiert zu starten?",
-        },
-      };
-    </script>
-    <script src="assets/js/header.js"></script>
-    <script src="assets/js/footer.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/footer.js"></script>
   </body>
 </html>

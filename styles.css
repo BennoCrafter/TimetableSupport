@@ -189,6 +189,11 @@ a {
   color: var(--ink);
 }
 
+.brand,
+.btn {
+  white-space: nowrap;
+}
+
 .brand img {
   width: 32px;
   height: 32px;
@@ -494,6 +499,32 @@ section {
 
 /* ---------- Responsive ---------- */
 
+/* The header always stays one row: as the viewport narrows it drops, in order, the Ko-fi label,
+   the header CTA (the hero has its own App Store button; the logo links home) and the brand name.
+   German labels are the longest, so check breakpoints with lang=de. */
+
+@media (max-width: 960px) {
+  .btn-kofi {
+    padding: 9px;
+  }
+
+  .btn-kofi span {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .brand-name {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .hero .wrap {
     grid-template-columns: 1fr;
@@ -531,23 +562,8 @@ section {
 }
 
 @media (max-width: 560px) {
-  .site-header .wrap {
-    height: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    flex-wrap: wrap;
-  }
-
   .header-actions {
     gap: 8px;
-  }
-
-  .btn-kofi {
-    padding: 9px;
-  }
-
-  .btn-kofi span {
-    display: none;
   }
 
   .btn-primary {
