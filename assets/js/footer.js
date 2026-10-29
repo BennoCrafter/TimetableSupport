@@ -23,7 +23,7 @@
           <a href="https://ko-fi.com/bennowo" target="_blank" rel="noopener" aria-label="Support me on Ko-fi">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M10 17.5s-3.5-2-3.5-4.25A1.75 1.75 0 0 1 10 12.5a1.75 1.75 0 0 1 3.5.75c0 2.25-3.5 4.25-3.5 4.25z" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://bennowo.vercel.app" target="_blank" rel="noopener" aria-label="Website">
+          <a href="https://bennowo.de" target="_blank" rel="noopener" aria-label="Website">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </a>
         </div>

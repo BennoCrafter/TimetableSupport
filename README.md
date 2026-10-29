@@ -25,14 +25,16 @@ Keep paths relative (`assets/...`, never `/assets/...`) so the site also works f
 | `de/index.html` | German landing page, **generated** from `index.html` + `translations/home.de.json` by `scripts/build-de.mjs`, don't edit |
 | `feedback.html` | Feedback form → posts to `/api/create-issue` |
 | `privacy-policy.html`, `imprint.html` | Legal pages (`.page-hero` + `.content-card`) |
+| `404.html` | Not-found page, served by Vercel at any depth, so its paths are root-absolute (`/assets/…`) |
 | `new-event.html` | Redirects shared event links to the app (`timetablemanager://new-event?…`) |
-| `styles.css` | All shared styles. Design tokens (colors, radii) are CSS variables at the top |
+| `styles.css` | All shared styles. Design tokens are CSS variables at the top: brand colors from the app icon (`--navy`, `--sun`, `--coral`) and the app's subject colors (`--s-*`, applied via `.s-de`, `.s-ma`, … which set `--c`) |
 | `assets/js/theme.js` | Light/dark toggle; loaded in `<head>` to avoid a theme flash |
 | `assets/js/header.js`, `assets/js/footer.js` | Render the shared header/footer into `<header class="site-header">` / `<footer class="site-footer">` |
 | `assets/js/i18n.js` | EN/DE switching + strings shared by all pages; sends German visitors from `/` to `/de/` |
 | `robots.txt`, `sitemap.xml` | For search engines. Add new indexable pages to the sitemap |
 | `api/create-issue.js` | Vercel function: creates a GitHub issue in `BennoCrafter/Timetable` (env: `GITHUB_TOKEN`) |
-| `assets/images/screenshots/{hero,iphone}/{en,de}/` | App screenshots, one set per language |
+| `assets/images/screenshots/{hero,app}/{en,de}/` | App screenshots, one set per language: `hero/` the iPad dashboard, `app/` raw iPhone screens (640px webp, converted from `Timetable/assets/screenshots/raw/`) |
+| `assets/images/og/{en,de}/card.png` | 1200×630 social preview, a headless-Chrome screenshot of the homepage hero. Re-shoot it if the hero changes |
 
 ## How a page works
 

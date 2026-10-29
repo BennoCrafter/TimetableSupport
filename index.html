@@ -24,18 +24,20 @@
     <meta property="og:title" data-i18n-content="metaTitle" content="Timetable Manager - Your timetable, tasks and exams in one place" />
     <meta property="og:description" data-i18n-content="metaDescription" content="Timetable Manager is a clear, intuitive way to organize your timetable, manage tasks, and track exams — free on iPhone and iPad. No ads, nothing tracked." />
     <meta property="og:url" content="https://www.timetablemanager.app/" />
-    <meta property="og:image" content="https://www.timetablemanager.app/assets/images/screenshots/hero/en/dashboard.webp" />
-    <meta property="og:image:width" content="1600" />
-    <meta property="og:image:height" content="1200" />
+    <meta property="og:image" content="https://www.timetablemanager.app/assets/images/og/en/card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#fbf8f2" />
     <script type="application/ld+json">
       {"@context": "https://schema.org", "@type": "WebSite", "name": "Timetable Manager", "url": "https://www.timetablemanager.app/"}
     </script>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -46,21 +48,165 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-copy">
-          <h1 data-i18n="heroTitle">Your timetable, tasks, and exams — one clear place.</h1>
+          <h1>
+            <span data-i18n="heroTitleA">Your school week.</span>
+            <span class="marker" data-i18n="heroTitleB">Finally sorted.</span>
+          </h1>
           <p class="lede" data-i18n="heroLede">
-            TimetableManager is the perfect companion for your school day: completely free, with no ads and no paid upgrades. Keep track of your timetable on iPhone and iPad, and easily share homework and tests with your friends.          </p>
+            Timetable, homework, exams and grades in one app. Share homework and tests with your friends.
+          </p>
           <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              data-i18n="navGetApp"
-              href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
-              rel="nofollow noopener"
-              target="_blank"
-              >Get on App Store</a
-            >
+            <a class="store-badge" href="https://apps.apple.com/us/app/timetable-manager/id6738605424" rel="nofollow noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" /></svg>
+              <span><small data-i18n="badgeSmall">Download on the</small><b>App Store</b></span>
+            </a>
+            <p class="trust" data-i18n="trust">No ads, no tracking, 100% free</p>
           </div>
         </div>
+
         <div class="hero-visual">
+          <div class="phones">
+            <img
+              class="tablet"
+              data-src-en="assets/images/screenshots/hero/en/dashboard.webp"
+              data-src-de="assets/images/screenshots/hero/de/dashboard.webp"
+              src="assets/images/screenshots/hero/en/dashboard.webp"
+              data-i18n-alt="heroAlt"
+              alt="Timetable Manager week dashboard on iPad, with classes, tasks and grades together"
+              width="1600"
+              height="1200"
+            />
+            <img
+                class="phone phone-back"
+                data-src-en="assets/images/screenshots/app/en/dayview-theme.webp"
+                data-src-de="assets/images/screenshots/app/de/dayview-theme.webp"
+                src="assets/images/screenshots/app/en/dayview-theme.webp"
+                data-i18n-alt="shotDayThemeAlt"
+                alt="Day view in the Sahara theme"
+                width="640"
+                height="1391"
+              />
+            <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/dayview.webp"
+                data-src-de="assets/images/screenshots/app/de/dayview.webp"
+                src="assets/images/screenshots/app/en/dayview.webp"
+                data-i18n-alt="shotDayAlt"
+                alt="Day view: every class, color-coded and right on time"
+                width="640"
+                height="1391"
+              />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="feature-rows">
+          <div class="feature-row reveal">
+            <div class="feature-copy s-hi">
+              <span class="tag" data-i18n="featureCreatorTag">Setup</span>
+              <h3 data-i18n="featureCreatorTitle">Ready before the first bell.</h3>
+              <p data-i18n="featureCreatorText">Tick your subjects in a ready-made list, already named and colored. Then set the times for each subject once. A classmate already has theirs? Import their file and you're set in seconds.</p>
+            </div>
+            <div class="stage s-hi">
+              <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/creator.webp"
+                data-src-de="assets/images/screenshots/app/de/creator.webp"
+                src="assets/images/screenshots/app/en/creator.webp"
+                data-i18n-alt="shotCreatorAlt"
+                alt="Timetable Creator: pick a subject, its color and its slots in the week"
+                width="640"
+                height="1391" loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="feature-row reveal">
+            <div class="feature-copy s-bi">
+              <span class="tag" data-i18n="featureGroupsTag">Tasks &amp; groups</span>
+              <h3 data-i18n="featureGroupsTitle">One person writes it down. Everyone has it.</h3>
+              <p data-i18n="featureGroupsText">Homework and tests, grouped by when they're due. Start a group with your friends and share them via iCloud: someone adds the maths homework, and it shows up on everyone's device.</p>
+            </div>
+            <div class="stage s-bi">
+              <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/tasks.webp"
+                data-src-de="assets/images/screenshots/app/de/tasks.webp"
+                src="assets/images/screenshots/app/en/tasks.webp"
+                data-i18n-alt="shotTasksAlt"
+                alt="Tasks: every assignment, grouped by when it's due"
+                width="640"
+                height="1391" loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="feature-row reveal">
+            <div class="feature-copy s-ma">
+              <span class="tag" data-i18n="featureGradesTag">Grades</span>
+              <h3 data-i18n="featureGradesTitle">Know where you stand.</h3>
+              <p data-i18n="featureGradesText">Weighting, subject and overall averages, and a trend chart. Scan the test you got back and keep it right next to the grade.</p>
+            </div>
+            <div class="stage s-ma">
+              <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/grades.webp"
+                data-src-de="assets/images/screenshots/app/de/grades.webp"
+                src="assets/images/screenshots/app/en/grades.webp"
+                data-i18n-alt="shotGradesAlt"
+                alt="Grades: overall average, recent grades and averages by subject"
+                width="640"
+                height="1391" loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="feature-row reveal">
+            <div class="feature-copy s-ar">
+              <span class="tag" data-i18n="featureThemesTag">Themes</span>
+              <h3 data-i18n="featureThemesTitle">Make it yours.</h3>
+              <p data-i18n="featureThemesText">Pick one of the built-in themes or design your own.</p>
+            </div>
+            <div class="stage s-ar">
+              <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/theming.webp"
+                data-src-de="assets/images/screenshots/app/de/theming.webp"
+                src="assets/images/screenshots/app/en/theming.webp"
+                data-i18n-alt="shotThemesAlt"
+                alt="Themes: pick a theme, or design your own"
+                width="640"
+                height="1391" loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="feature-row reveal">
+            <div class="feature-copy s-cs">
+              <span class="tag" data-i18n="featureWidgetsTag">Widgets</span>
+              <h3 data-i18n="featureWidgetsTitle">Your next class, right on the Home Screen.</h3>
+              <p data-i18n="featureWidgetsText">Widgets for your day, your next class, your tasks and your grades.</p>
+            </div>
+            <div class="stage s-cs">
+              <img
+                class="phone"
+                data-src-en="assets/images/screenshots/app/en/widgets.webp"
+                data-src-de="assets/images/screenshots/app/de/widgets.webp"
+                src="assets/images/screenshots/app/en/widgets.webp"
+                data-i18n-alt="shotWidgetsAlt"
+                alt="Widgets: tasks, next class and grades, right on your Home Screen"
+                width="640"
+                height="1391" loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-wide reveal">
+          <div class="feature-copy c-navy">
+            <span class="tag" data-i18n="featureIpadTag">iPad</span>
+            <h3 data-i18n="featureIpadTitle">Your whole week on one screen.</h3>
+            <p data-i18n="featureIpadText">A freeform dashboard: arrange timetable, tasks and grades however you like.</p>
+          </div>
           <img
             class="dashboard-shot"
             data-src-en="assets/images/screenshots/hero/en/dashboard.webp"
@@ -68,178 +214,34 @@
             src="assets/images/screenshots/hero/en/dashboard.webp"
             data-i18n-alt="heroAlt"
             alt="Timetable Manager week dashboard on iPad, with classes, tasks and grades together"
+            loading="lazy"
+            width="1600"
+            height="1200"
           />
         </div>
-      </div>
-    </section>
 
-    <section class="showcase" id="screenshots">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 data-i18n="showcaseHeading">See it in action</h2>
-        </div>
-      </div>
-      <div class="showcase-strip">
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/01-dayview.webp"
-          data-src-de="assets/images/screenshots/iphone/de/01-dayview.webp"
-          src="assets/images/screenshots/iphone/en/01-dayview.webp"
-          data-i18n-alt="shotDayAlt"
-          alt="Day view: every class, color-coded and right on time"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/06-creator.webp"
-          data-src-de="assets/images/screenshots/iphone/de/06-creator.webp"
-          src="assets/images/screenshots/iphone/en/06-creator.webp"
-          data-i18n-alt="shotCreatorAlt"
-          alt="Build schedule: set your subjects and colors once"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/03-theming.webp"
-          data-src-de="assets/images/screenshots/iphone/de/03-theming.webp"
-          src="assets/images/screenshots/iphone/en/03-theming.webp"
-          data-i18n-alt="shotThemesAlt"
-          alt="Themes: pick a theme, or design your own"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/04-tasks.webp"
-          data-src-de="assets/images/screenshots/iphone/de/04-tasks.webp"
-          src="assets/images/screenshots/iphone/en/04-tasks.webp"
-          data-i18n-alt="shotTasksAlt"
-          alt="Tasks: every assignment, grouped by when it's due"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/05-grades.webp"
-          data-src-de="assets/images/screenshots/iphone/de/05-grades.webp"
-          src="assets/images/screenshots/iphone/en/05-grades.webp"
-          data-i18n-alt="shotGradesAlt"
-          alt="Grades: see your average and progress, by subject"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/02-widgets.webp"
-          data-src-de="assets/images/screenshots/iphone/de/02-widgets.webp"
-          src="assets/images/screenshots/iphone/en/02-widgets.webp"
-          data-i18n-alt="shotWidgetsAlt"
-          alt="Widgets: tasks, next class and grades, right on your Home Screen"
-        />
-        <img
-          class="i18n-shot"
-          data-src-en="assets/images/screenshots/iphone/en/07-share.webp"
-          data-src-de="assets/images/screenshots/iphone/de/07-share.webp"
-          src="assets/images/screenshots/iphone/en/07-share.webp"
-          data-i18n-alt="shotShareAlt"
-          alt="Sharing: keep your whole friend group on the same page"
-        />
-      </div>
-    </section>
-
-    <section id="features">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 data-i18n="featuresHeading">Everything for your school day</h2>
-        </div>
-        <div class="feature-grid">
-          <div class="feature-card feature-card-wide">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 11h6M9 15h4"></path>
-                <rect x="4" y="4" width="16" height="17" rx="2"></rect>
-                <path d="m14 4 1 3h-6l1-3"></path>
-              </svg>
-            </div>
-            <h3 data-i18n="featureCreatorTitle">Your timetable, ready in minutes</h3>
-            <p data-i18n="featureCreatorText">Tick your subjects in a ready-made list, already named and colored. The Timetable Creator then takes you through them one by one: set the times once and each class repeats every week. A classmate already has theirs? Import their file and you're set in seconds.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3 data-i18n="featureGroupsTitle">Groups with friends</h3>
-            <p data-i18n="featureGroupsText">Share homework and tests with your friends via iCloud. One person adds it, everyone has it.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3v18h18"></path>
-                <rect x="7" y="13" width="3" height="5"></rect>
-                <rect x="12" y="9" width="3" height="9"></rect>
-                <rect x="17" y="5" width="3" height="13"></rect>
-              </svg>
-            </div>
-            <h3 data-i18n="featureGradesTitle">Grades</h3>
-            <p data-i18n="featureGradesText">Weighting, subject and overall averages, and a trend chart. Scan the returned test and keep it with the grade.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 12a11.05 11.05 0 0 0-22 0z"></path>
-                <path d="M12 12v7a3 3 0 0 1-6 0"></path>
-              </svg>
-            </div>
-            <h3 data-i18n="featureHolidaysTitle">Holidays</h3>
-            <p data-i18n="featureHolidaysText">School breaks and public holidays for your region are added automatically.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                <line x1="11" y1="18" x2="13" y2="18"></line>
-              </svg>
-            </div>
-            <h3 data-i18n="featureIpadTitle">Built for iPad</h3>
-            <p data-i18n="featureIpadText">A freeform dashboard: arrange timetable, tasks and grades however you like, and stack cards into tabs.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="8" height="8" rx="1.5"></rect>
-                <rect x="13" y="3" width="8" height="8" rx="1.5"></rect>
-                <rect x="3" y="13" width="8" height="8" rx="1.5"></rect>
-                <rect x="13" y="13" width="8" height="8" rx="1.5"></rect>
-              </svg>
-            </div>
-            <h3 data-i18n="featureWidgetsTitle">Widgets</h3>
-            <p data-i18n="featureWidgetsText">Day schedule, tasks, grades, holidays and a countdown.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22a9.7 9.7 0 0 1-7.2-3.2A9.6 9.6 0 0 1 2 12a10 10 0 0 1 10-10 9 9 0 0 1 9 8c0 2.5-2 4-4 4h-1.5a1.5 1.5 0 0 0-1 2.5c.4.4.5 1 .5 1.5a2 2 0 0 1-2 2Z"></path>
-                <circle cx="6.5" cy="11.5" r="1.5"></circle>
-                <circle cx="9.5" cy="7.5" r="1.5"></circle>
-                <circle cx="14.5" cy="7.5" r="1.5"></circle>
-                <circle cx="17.5" cy="11.5" r="1.5"></circle>
-              </svg>
-            </div>
-            <h3 data-i18n="featureThemesTitle">Themes and app icons</h3>
-            <p data-i18n="featureThemesText">Built-in themes or your own, plus alternate app icons.</p>
-          </div>
+        <div class="extras reveal">
+          <span data-i18n="extrasLabel">Also included:</span>
+          <span class="pill s-ch" data-i18n="extraHolidays">School holidays for your region, added automatically</span>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
+    <section class="why">
       <div class="wrap">
-        <h2 data-i18n="ctaHeading">Ready to get organized?</h2>
-        <a
-          class="btn btn-primary"
-          data-i18n="navGetApp"
-          href="https://apps.apple.com/us/app/timetable-manager/id6738605424"
-          rel="nofollow noopener"
-          target="_blank"
-          >Get on App Store</a
-        >
+        <div class="why-card reveal">
+          <div>
+            <p class="eyebrow" data-i18n="whyEyebrow">Why it's free</p>
+            <p data-i18n="whyText">Timetable Manager is an indie app. I spent ages looking for the perfect timetable app myself, but everywhere I went, pro features locked behind a paywall got on my nerves. So over the last three years, I built my own.</p>
+            <p data-i18n="whyKofi">If you enjoy the app, I'd be happy about a coffee on Ko-fi. It helps me keep improving it.</p>
+            <a class="btn btn-ghost" href="https://ko-fi.com/bennowo" target="_blank" rel="noopener" data-i18n="navKofi">Support me on Ko-fi</a>
+          </div>
+          <ul class="no-list">
+            <li class="c-coral" data-i18n="noAds">Ads</li>
+            <li class="s-ma" data-i18n="noTrackers">Trackers</li>
+            <li class="s-bi" data-i18n="noPaywalls">Paywalls</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -247,5 +249,25 @@
 
     <script src="assets/js/header.js"></script>
     <script src="assets/js/footer.js"></script>
+    <script>
+      // Fade sections in as they scroll into view. Without IntersectionObserver everything just shows.
+      if ("IntersectionObserver" in window) {
+        document.documentElement.classList.add("reveal-on");
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px" }
+        );
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          io.observe(el);
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <!-- Vercel serves this for any missing URL, at any depth, so paths here are root-absolute (unlike the other pages). -->
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/i18n.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found - Timetable Manager</title>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .lost {
+        padding: 96px 0 120px;
+        text-align: center;
+      }
+
+      .lost .slot {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--muted);
+        border: 1.5px dashed var(--border);
+        border-radius: 9px;
+        padding: 8px 18px;
+        margin-bottom: 28px;
+      }
+
+      .lost h1 {
+        font-size: clamp(48px, 8vw, 88px);
+        margin: 0 0 16px;
+      }
+
+      .lost p {
+        color: var(--ink-soft);
+        margin: 0 auto 32px;
+        max-width: 40ch;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" data-cta="home"></header>
+
+    <section class="lost">
+      <div class="wrap">
+        <span class="slot">404</span>
+        <h1 data-i18n="lostTitle">Free period.</h1>
+        <p data-i18n="lostText">This page skipped class. It doesn't exist, or it has moved.</p>
+        <a class="btn btn-primary" href="/" data-i18n="navBackHome">Back to home</a>
+      </div>
+    </section>
+
+    <footer class="site-footer"></footer>
+
+    <script>
+      window.TRANSLATIONS = {
+        en: {
+          lostTitle: "Free period.",
+          lostText: "This page skipped class. It doesn't exist, or it has moved.",
+        },
+        de: {
+          lostTitle: "Freistunde.",
+          lostText: "Diese Seite schwänzt. Es gibt sie nicht, oder sie ist umgezogen.",
+        },
+      };
+    </script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/footer.js"></script>
+  </body>
+</html>
