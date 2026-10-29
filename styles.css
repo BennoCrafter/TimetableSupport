@@ -443,13 +443,6 @@ a {
   flex-wrap: wrap;
 }
 
-.trust {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
 /* ---------- Phone screenshots ---------- */
 
 .hero-visual {
